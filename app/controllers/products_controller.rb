@@ -53,7 +53,7 @@ class ProductsController < ApplicationController
   end
 
   def page
-    render :layout => false
+    render layout: false
   end
 
   def destroy
