@@ -80,6 +80,8 @@ test:
 #
 production:
   <<: *default
-  database: ppc_production
-  username: ppc
-  password: <%= ENV['PPC_DATABASE_PASSWORD'] %>
+  database: d1euh8q15dpo2l
+  username: bzexdgdrfmdjvg
+  password: b82df06c5746fea08f4c59dfc093cd34755cb07240e272b90d7defc9f294557c
+  port: 5432
+  host: ec2-54-225-107-107.compute-1.amazonaws.com
