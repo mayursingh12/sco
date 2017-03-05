@@ -1,0 +1,8 @@
+<%= simple_form_for @product do |f| %>
+    <%= f.input :title %>
+    <% if params[:action] == 'new' or  params[:action] == 'create' %>
+        <%= f.input :description, as: :file, input_html: {'accept': 'text/html'} %>
+    <% end %>
+
+    <%= f.submit 'Save', class: 'btn btn-success' %>
+<%- end %>

@@ -1,0 +1,23 @@
+<div class="admin-main-con">
+  <div class='col-xs-12'>
+    <div class="row">
+      <div class="col-sm-12">
+        <h2><%= @product.title.titleize %></h2>
+      </div>
+      <div class="col-sm-12">
+        <h4 class="text-danger">PPC links</h4>
+        <hr>
+        <% @ppc_links.each_with_index do |link, index| %>
+            <strong><%= "#{index+1}) " %><%= raw link %></strong>
+            <hr>
+        <% end %>
+        <h4 class="text-danger">Organic links</h4>
+        <hr>
+        <% @organic_links.each_with_index do |link, index| %>
+            <strong><%="#{index+1}) " %> <%= raw link %></strong>
+            <hr>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

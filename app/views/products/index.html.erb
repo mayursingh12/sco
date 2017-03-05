@@ -1,0 +1,41 @@
+<div class="admin-main-con">
+  <div class='col-xs-12'>
+    <h2>Products</h2>
+    <%= link_to 'New Product', new_product_path, class: 'btn btn-primary' %>
+    <div class="row">
+      <div class="col-sm-12">
+        <table class="table table-striped">
+          <thead>
+          <tr class="info">
+            <th>ID</th>
+            <th>Title</th>
+            <th>Actions</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% @products.each do |product| %>
+              <tr>
+                <td><%= product.id %></td>
+                <td><%= product.title.titleize %></td>
+                <td>
+                  <%= link_to page_product_path(product) do %>
+                      <i class="fa fa-html5"></i>
+                  <% end %>
+                  <%= link_to product_path(product) do %>
+                      <i class="fa fa-eye"></i>
+                  <%- end %>
+                  <%= link_to edit_product_path(product) do %>
+                      <i class="fa fa-edit"></i>
+                  <%- end %>
+                  <%= link_to product_path(product), method: :delete, data: {confirm: 'Are you sure?'}, class: 'text-danger' do %>
+                      <i class="fa fa-trash"></i>
+                  <% end %>
+                </td>
+              </tr>
+          <%- end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
